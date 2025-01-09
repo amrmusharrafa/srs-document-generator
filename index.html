@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SRS Document Generator</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Dark Mode Toggle -->
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+
+  <!-- Form Container -->
+  <div class="container">
+    <h1>Software Requirement Specification (SRS) Document Generator</h1>
+
+    <!-- Form Inputs -->
+    <form id="srsForm">
+      <h2>1. Introduction</h2>
+      <div class="explanation">
+        Provide an overview of the software project, including its purpose, audience, and scope.
+      </div>
+
+      <label for="purpose">Purpose:</label>
+      <textarea id="purpose" placeholder="Describe the purpose of the software..."></textarea>
+
+      <label for="audience">Intended Audience:</label>
+      <textarea id="audience" placeholder="Describe the target users..."></textarea>
+
+      <label for="scope">Product Scope:</label>
+      <textarea id="scope" placeholder="Outline the product scope..."></textarea>
+
+      <label for="value">Product Value:</label>
+      <textarea id="value" placeholder="Explain the product's value..."></textarea>
+
+      <label for="use">Intended Use:</label>
+      <textarea id="use" placeholder="Describe how the product will be used..."></textarea>
+
+      <label for="definitions">Definitions and Acronyms:</label>
+      <textarea id="definitions" placeholder="List and define terms..."></textarea>
+
+      <h2>2. System and Functional Requirements</h2>
+      <div class="explanation">
+        Describe the specific features and functions the software must perform.
+      </div>
+
+      <label for="functionalReqs">Functional Requirements:</label>
+      <textarea id="functionalReqs" placeholder="List functional requirements..."></textarea>
+
+      <h2>3. External Interface Requirements</h2>
+      <div class="explanation">
+        Specify how the software will interact with users, hardware, other software, and communication systems.
+      </div>
+
+      <label for="userInterfaces">User Interfaces:</label>
+      <textarea id="userInterfaces" placeholder="Describe user interfaces..."></textarea>
+
+      <label for="hardwareInterfaces">Hardware Interfaces:</label>
+      <textarea id="hardwareInterfaces" placeholder="Describe hardware interfaces..."></textarea>
+
+      <label for="softwareInterfaces">Software Interfaces:</label>
+      <textarea id="softwareInterfaces" placeholder="Describe software interfaces..."></textarea>
+
+      <label for="communicationInterfaces">Communication Interfaces:</label>
+      <textarea id="communicationInterfaces" placeholder="Describe communication interfaces..."></textarea>
+
+      <h2>4. Non-Functional Requirements (NFRs)</h2>
+      <div class="explanation">
+        Define how the system should behave, including performance, security, scalability, and usability.
+      </div>
+
+      <label for="security">Security:</label>
+      <textarea id="security" placeholder="Describe security requirements..."></textarea>
+
+      <label for="capacity">Capacity:</label>
+      <textarea id="capacity" placeholder="Describe capacity requirements..."></textarea>
+
+      <label for="compatibility">Compatibility:</label>
+      <textarea id="compatibility" placeholder="Describe compatibility requirements..."></textarea>
+
+      <label for="reliability">Reliability and Availability:</label>
+      <textarea id="reliability" placeholder="Describe reliability requirements..."></textarea>
+
+      <label for="scalability">Scalability:</label>
+      <textarea id="scalability" placeholder="Describe scalability requirements..."></textarea>
+
+      <label for="maintainability">Maintainability:</label>
+      <textarea id="maintainability" placeholder="Describe maintainability requirements..."></textarea>
+
+      <label for="usability">Usability:</label>
+      <textarea id="usability" placeholder="Describe usability requirements..."></textarea>
+
+      <label for="performance">Performance:</label>
+      <textarea id="performance" placeholder="Describe performance requirements..."></textarea>
+
+      <label for="regulatory">Regulatory and Environmental Requirements:</label>
+      <textarea id="regulatory" placeholder="Describe regulatory requirements..."></textarea>
+
+      <h2>5. Appendices</h2>
+      <div class="explanation">
+        Include additional information like visuals, change logs, and references.
+      </div>
+
+      <label for="visuals">Visuals and Diagrams:</label>
+      <textarea id="visuals" placeholder="Describe or link to visuals..."></textarea>
+
+      <label for="changeLog">Change Log:</label>
+      <textarea id="changeLog" placeholder="Track changes..."></textarea>
+
+      <label for="references">References:</label>
+      <textarea id="references" placeholder="List references..."></textarea>
+    </form>
+
+    <!-- Buttons for Export and Preview -->
+    <div class="buttons">
+      <button onclick="exportToPDF()">Export to PDF</button>
+      <button onclick="showPreview()">Preview</button>
+      <button onclick="exportToTXT()">Export to TXT</button>
+    </div>
+
+    <!-- Footer with Credentials -->
+    <div class="footer">
+      Developed with love by Amr Musharrafa ❤️ 2024
+    </div>
+  </div>
+
+  <!-- Preview Modal -->
+  <div class="modal" id="previewModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Preview</h2>
+        <button onclick="closePreview()">&times;</button>
+      </div>
+      <div class="modal-body" id="previewContent">
+        <!-- Preview content will be inserted here -->
+      </div>
+    </div>
+  </div>
+</body>
+</html>
